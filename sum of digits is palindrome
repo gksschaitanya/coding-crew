@@ -1,0 +1,28 @@
+
+6.sum of digits is palindrome
+// User function Template for C++
+
+class Solution {
+  public:
+    int isDigitSumPalindrome(int n) {
+        // code here
+        int sum=0;
+        while(n!=0)
+        {
+            sum+=n%10;
+            n=n/10;
+        }
+    
+    std::string s = std::to_string(sum);
+    int left = 0;
+    int right = s.length() - 1;
+    while (left < right) {
+        if (s[left] != s[right]) {
+            return 0;
+        }
+        left++;
+        right--;
+    }
+    return 1; 
+    }
+};
