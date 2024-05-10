@@ -1,0 +1,153 @@
+1. Sum of series
+class Solution {
+  public:
+    long long seriesSum(int n) {
+        
+        return static_cast<long long>(n) * (n + 1) / 2;
+    }
+};
+
+3.armstrong number
+// User function Template for C++
+class Solution {
+  public:
+    string armstrongNumber(int n){
+        int sum=0;
+        int temp=n;
+        while(temp!=0)
+        {
+            int digit=temp%10;
+            sum+=pow(digit,3);
+            temp/=10;
+        }
+        if(sum==n)
+        {
+        return "Yes";
+        }
+        else
+        {
+            return "No";
+        }
+    }
+};
+4.reverse digits
+class Solution
+{
+	public:
+		long long int reverse_digit(long long int n)
+		{
+		    long long int m=0;
+		    while(n!=0)
+		    {
+		        int j=n%10;
+		        m=m*10+j;
+		        n/=10;
+		    }
+		    return m;
+		}
+};
+5.gcd
+
+class Solution {
+  public:
+    int gcd(int a, int b) {
+        // code here
+        while(b!=0)
+        {
+            int temp=b;
+            b=a%b;
+            a=temp;
+            
+        }
+        return a;
+    }
+};
+6.sum of digits is palindrome
+// User function Template for C++
+
+class Solution {
+  public:
+    int isDigitSumPalindrome(int n) {
+        // code here
+        int sum=0;
+        while(n!=0)
+        {
+            sum+=n%10;
+            n=n/10;
+        }
+    
+    std::string s = std::to_string(sum);
+    int left = 0;
+    int right = s.length() - 1;
+    while (left < right) {
+        if (s[left] != s[right]) {
+            return 0;
+        }
+        left++;
+        right--;
+    }
+    return 1; 
+    }
+};
+7.series ap
+// User function template for C++
+
+class Solution {
+  public:
+    int nthTermOfAP(int a1, int a2, int n) {
+        // code here
+        int d=a2-a1;
+        return a1+(n-1)*d;
+    }
+};
+8.addition of two numbers
+class Solution{   
+public:
+    int addition(int A, int B){
+        // code here 
+        return A+B;
+    }
+};
+9.odd or even
+class Solution{   
+public:
+    string oddEven(int N){
+        // code here 
+        if(N%2==0)
+        return "even";
+        else
+        return "odd";
+    }
+};
+10.multiplication table
+//User function Template for C++
+class Solution
+{
+public:
+    vector<int> getTable(int N)
+    {
+        // Write Your Code here
+        int i=1;
+        vector<int>sol;
+        while(i!=11)
+        {
+            sol.push_back(N*i);
+            i+=1;
+        }
+        return sol;
+    }
+};
+11.swap numbers
+//User function Template for C++
+
+class Solution{   
+public:
+    pair<int, int> get(int a, int b){
+        //complete the function here
+        a=a+b;
+        b=a-b;
+        a=a-b;
+        return {a,b};
+    }
+};
+12.
