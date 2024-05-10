@@ -1,0 +1,23 @@
+3.armstrong number
+// User function Template for C++
+class Solution {
+  public:
+    string armstrongNumber(int n){
+        int sum=0;
+        int temp=n;
+        while(temp!=0)
+        {
+            int digit=temp%10;
+            sum+=pow(digit,3);
+            temp/=10;
+        }
+        if(sum==n)
+        {
+        return "Yes";
+        }
+        else
+        {
+            return "No";
+        }
+    }
+};
