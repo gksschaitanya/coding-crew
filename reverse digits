@@ -1,0 +1,16 @@
+4.reverse digits
+class Solution
+{
+	public:
+		long long int reverse_digit(long long int n)
+		{
+		    long long int m=0;
+		    while(n!=0)
+		    {
+		        int j=n%10;
+		        m=m*10+j;
+		        n/=10;
+		    }
+		    return m;
+		}
+};
